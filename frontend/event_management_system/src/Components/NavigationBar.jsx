@@ -6,7 +6,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image';
 import logo from '../Assets/Logo/event ease.png';
-import './NavigationBar.css'
+import './NavigationBar.css';
 
 export default function NavigationBar() {
   return (

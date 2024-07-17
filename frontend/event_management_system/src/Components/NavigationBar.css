@@ -17,8 +17,13 @@
 .d-flex{
     margin-left: auto;
 }
-.me-auto{
+.me-auto .nav-link{
     display: flex;
-    margin-left: 40%;
+    color: #09B3B0;
     gap: 10%;
+}
+.me-auto{
+    margin-left: 40%;
+    
+
 }

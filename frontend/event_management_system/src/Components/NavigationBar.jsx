@@ -25,8 +25,9 @@ export default function NavigationBar() {
         </Form>
         <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#events">Events</Nav.Link>
+            <Nav.Link href="#events">Event List</Nav.Link>
             <Nav.Link href="#addevents">Add Event</Nav.Link>
+            
         </Nav>
         </Container>
       </Navbar>

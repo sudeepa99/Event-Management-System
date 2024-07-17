@@ -1,0 +1,22 @@
+.cards{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}.homepage_cards{
+    background: none;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+.homepage_cards:hover,
+.homepage_cards:focus{
+    background: none;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+
+}

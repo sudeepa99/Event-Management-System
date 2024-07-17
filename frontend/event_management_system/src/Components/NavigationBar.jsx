@@ -17,7 +17,7 @@ export default function NavigationBar() {
         <Form className="d-flex">
             <Form.Control
               type="search"
-              placeholder="Search"
+              placeholder="Search by event ID"
               className="me-2"
               aria-label="Search"
             />

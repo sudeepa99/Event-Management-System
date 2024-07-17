@@ -10,7 +10,7 @@ export default function CardDesign(props) {
         <Card style={{ width: '18rem' }}>
         <Card.Img variant="top" src={props.image_name} />
         <Card.Body>
-        <Card.Title>{props.detail}</Card.Title>
+        <Card.Title>{props.name}</Card.Title>
         <div className='button_section'>
         <Button className='see more' >See More</Button>
         </div>

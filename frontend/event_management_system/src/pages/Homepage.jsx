@@ -11,8 +11,8 @@ export default function Homepage() {
         <ImageSlider/>
         
         <div className="cards">
-        <CardDesign detail="detail of the event" />
-        <CardDesign detail="detail of the event" />
+        <CardDesign name="name of the event" />
+        <CardDesign name="name of the event" />
 
         </div>
         

@@ -1,29 +1,32 @@
-.logo{
-    height: 20%;
-    width: 15%;
+.logo { /* Adjusted for better visibility */
+    width: auto;
+    height: auto;
 }
+
 .nav-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.navbar{
-    position: absolute;
-    left: 0%;
-    padding-left: 0%;
+.navbar {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
     width: 100%;
+    z-index: 1000; 
 }
-.d-flex{
-    margin-left: auto;
-}
-.me-auto .nav-link{
-    display: flex;
-    color: #09B3B0;
-    gap: 10%;
-}
-.me-auto{
-    margin-left: 40%;
-    
 
+.d-flex {
+    margin-left: 3.5%; 
+}
+
+.me-auto {
+    display: flex;
+    align-items: center;
+    margin-left: 30%;
+}
+
+.me-auto .nav-link {
+    color: #09B3B0 ; 
 }

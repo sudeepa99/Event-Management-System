@@ -1,0 +1,27 @@
+.event_cards{
+    display: flex;
+    flex-direction: row;
+}
+.more_details{
+    background-color: #FF9F00;
+}
+.update{
+    background-color: #09B3B0;
+    
+
+}
+.delete{
+    background-color: #ff0f0f;
+    
+}
+.button_section{
+    /* display: flex;
+    gap: 5%; */
+}
+.more_details, .delete, .update {
+    color: black;
+    border-style: groove;
+    border-width: 2%;
+    border-color: wheat;
+
+}

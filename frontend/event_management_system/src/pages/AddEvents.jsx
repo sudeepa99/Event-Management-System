@@ -6,7 +6,7 @@ export default function AddEvents() {
   return (
     <div>
         <NavigationBar/>
-        <Form/>
+        <Form />
 
       
     </div>

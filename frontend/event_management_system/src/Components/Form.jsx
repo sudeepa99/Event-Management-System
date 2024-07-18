@@ -16,10 +16,42 @@ export default function Form() {
           [name]: value
         });
       };
-      const handleSubmit = (e) => {
+      const handleSubmit = async (e) => {
         e.preventDefault();
         console.log(formData);
+
+        try {
+            const response = await fetch('http://localhost:8080/api/events', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                name: formData.eventName,
+                date: formData.eventDate,
+                location: formData.eventLocation,
+                description: formData.eventDescription
+              })
+            });
+      
+            if (response.ok) {
+              const data = await response.json();
+              console.log('Event added successfully:', data);
+              // Optionally, reset the form after successful submission
+              setFormData({
+                eventName: '',
+                eventDate: '',
+                eventLocation: '',
+                eventDescription: ''
+              });
+            } else {
+              console.error('Failed to add event:', response.statusText);
+            }
+          } catch (error) {
+            console.error('Error adding event:', error);
+          }
       };
+      
   return (
     <div className='form'>
         <form onSubmit={handleSubmit}>
@@ -76,5 +108,5 @@ export default function Form() {
         </form>
       
     </div>
-  )
+  );
 }

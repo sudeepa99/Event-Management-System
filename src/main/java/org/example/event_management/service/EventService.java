@@ -3,7 +3,7 @@ import org.example.event_management.model.Event;
 import org.example.event_management.repository.EventRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.Optional;
 
@@ -11,31 +11,26 @@ import java.util.Optional;
 public class EventService {
     @Autowired
     private EventRepository eventRepository;
-
+    @Transactional(readOnly = true)
     public List<Event> getAllEvents() {
         return eventRepository.findAll();
     }
-
-    public Optional<Event> getEventById(Long id) {
-        return eventRepository.findById(id);
-    }
-
+    @Transactional
     public Event addEvent(Event event) {
         return eventRepository.save(event);
     }
-
-    public Event updateEvent(Long id, Event eventDetails) {
-        Event event = eventRepository.findById(id).orElseThrow(() -> new RuntimeException("Event not found"));
-        event.setEventName(eventDetails.getEventName());
-        event.setDescription(eventDetails.getDescription());
-        event.setEventDate(eventDetails.getEventDate());
-        event.setLocation(eventDetails.getLocation());
-        event.setAttendees(eventDetails.getAttendees());
-        return eventRepository.save(event);
+    @Transactional
+    public Optional<Event> updateEvent(Long id, Event eventDetails) {
+        return eventRepository.findById(id).map(event -> {
+            event.setName(eventDetails.getName());
+            event.setDescription(eventDetails.getDescription());
+            event.setDate(eventDetails.getDate());
+            event.setLocation(eventDetails.getLocation());
+            return eventRepository.save(event);
+        });
     }
-
+    @Transactional(readOnly = true)
     public void deleteEvent(Long id) {
-        Event event = eventRepository.findById(id).orElseThrow(() -> new RuntimeException("Event not found"));
-        eventRepository.delete(event);
+        eventRepository.deleteById(id);
     }
 }

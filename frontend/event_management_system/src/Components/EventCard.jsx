@@ -4,6 +4,8 @@ import Card from 'react-bootstrap/Card';
 import './EventCard.css';
 
 export default function EventCard(props) {
+
+  
   return (
     <div className='event_cards'>
     

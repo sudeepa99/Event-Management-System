@@ -8,7 +8,7 @@ export default function CardDesign(props) {
     <div > 
         <Button className='homepage_cards'>
         <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={props.image_name} />
+        {/* <Card.Img variant="top" src={props.image_name} /> */}
         <Card.Body>
         <Card.Title>{props.name}</Card.Title>
         <div className='button_section'>

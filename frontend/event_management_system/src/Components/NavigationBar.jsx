@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -7,8 +7,30 @@ import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image';
 import logo from '../Assets/Logo/event ease.png';
 import './NavigationBar.css';
+import EventSearchResult from './EventSearchResult';
 
 export default function NavigationBar() {
+
+  const [searchId, setSearchId] = useState('');
+  const [event, setEvent] = useState(null);
+
+  const handleSearchChange = (e) => {
+    setSearchId(e.target.value);
+  };
+
+  const handleSearchClick = async () => {
+    try {
+      const response = await fetch(`http://localhost:8080/api/events/${searchId}`);
+      if (!response.ok) {
+        throw new Error('Event not found');
+      }
+      const data = await response.json();
+      setEvent(data);
+    } catch (error) {
+      console.error('Error fetching event:', error);
+      setEvent(null);
+    }
+  };
   return (
     <div >
         <Navbar className='navbar' bg="light" data-bs-theme="light">
@@ -20,8 +42,10 @@ export default function NavigationBar() {
               placeholder="Search by event ID"
               className="me-2"
               aria-label="Search"
+              value={searchId}
+              onChange={handleSearchChange}
             />
-            <Button variant="outline-success">Search</Button>
+            <Button variant="outline-success" onClick={handleSearchClick}>Search</Button>
         </Form>
         <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
@@ -31,7 +55,7 @@ export default function NavigationBar() {
         </Nav>
         </Container>
       </Navbar>
-      
+      {event && <EventSearchResult event={event} />}
     </div>
   )
 }

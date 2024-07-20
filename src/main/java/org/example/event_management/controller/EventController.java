@@ -25,6 +25,11 @@ public class EventController {
     public Event addEvent(@RequestBody Event event) {
         return eventService.addEvent(event);
     }
+    // EventController.java
+    @GetMapping("/{id}")
+    public Event getEventById(@PathVariable Long id) {
+        return eventService.getEventById(id);
+    }
 
     @PutMapping("/{id}")
     public ResponseEntity<Event> updateEvent(@PathVariable Long id, @RequestBody Event eventDetails) {

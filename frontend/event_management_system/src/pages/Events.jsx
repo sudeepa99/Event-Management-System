@@ -27,7 +27,7 @@ export default function Events() {
         <h1 className='event_head'>Event List</h1>
         <div className='event_list'>
         {events.map(event => (
-          <EventCard key={event.id} event_id={event.id} name={event.name} />
+          <EventCard key={event.id} event_id={event.id} name={event.name} attendees={event.attendees}/>
         ))}
       </div>
         

@@ -29,7 +29,6 @@ export default function Homepage() {
         <ImageSlider/>
         
         <div className="cards">
-        <CardDesign />
         <div className="event_card_list">
         {events.map(event => (
           <CardDesign key={event.id} name={event.name} />

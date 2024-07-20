@@ -35,7 +35,11 @@ public class EventService {
         });
     }
     @Transactional(readOnly = true)
-    public void deleteEvent(Long id) {
-        eventRepository.deleteById(id);
+    public boolean deleteEvent(Long id) {
+        if (eventRepository.existsById(id)) {
+            eventRepository.deleteById(id);
+            return true;
+        }
+        return false;
     }
 }

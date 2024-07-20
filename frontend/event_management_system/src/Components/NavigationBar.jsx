@@ -48,9 +48,9 @@ export default function NavigationBar() {
             <Button variant="outline-success" onClick={handleSearchClick}>Search</Button>
         </Form>
         <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#events">Event List</Nav.Link>
-            <Nav.Link href="#addevents">Add Event</Nav.Link>
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="events">Event List</Nav.Link>
+            <Nav.Link href="addevent">Add Event</Nav.Link>
             
         </Nav>
         </Container>

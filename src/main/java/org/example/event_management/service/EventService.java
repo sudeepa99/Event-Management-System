@@ -15,8 +15,12 @@ public class EventService {
     public List<Event> getAllEvents() {
         return eventRepository.findAll();
     }
+    public Event getEventById(Long id) {
+        return eventRepository.findById(id).orElse(null);
+    }
     @Transactional
     public Event addEvent(Event event) {
+
         return eventRepository.save(event);
     }
     @Transactional
@@ -25,6 +29,7 @@ public class EventService {
             event.setName(eventDetails.getName());
             event.setDescription(eventDetails.getDescription());
             event.setDate(eventDetails.getDate());
+            event.setAttendees(eventDetails.getAttendees());
             event.setLocation(eventDetails.getLocation());
             return eventRepository.save(event);
         });

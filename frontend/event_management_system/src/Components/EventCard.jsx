@@ -13,6 +13,7 @@ export default function EventCard(props) {
         <Card.Body>
         <Card.Title>{props.event_id}</Card.Title>
         <Card.Title>{props.name}</Card.Title>
+        <Card.Title>{props.attendees}</Card.Title>
         <div className='button_section'>
         <Button className='more_details' >More Details</Button>
         <Button className='update'>Update Event</Button>

@@ -7,6 +7,7 @@ export default function Form() {
         eventName: '',
         eventDate: '',
         eventLocation: '',
+        eventAttendees: '',
         eventDescription: ''
       });
       const handleChange = (e) => {
@@ -30,6 +31,7 @@ export default function Form() {
                 name: formData.eventName,
                 date: formData.eventDate,
                 location: formData.eventLocation,
+                attendees: formData.eventAttendees,
                 description: formData.eventDescription
               })
             });
@@ -42,6 +44,7 @@ export default function Form() {
                 eventName: '',
                 eventDate: '',
                 eventLocation: '',
+                eventAttendees: '',
                 eventDescription: ''
               });
             } else {
@@ -86,6 +89,17 @@ export default function Form() {
                     id='eventLocation'
                     name='eventLocation'
                     value={formData.eventLocation}
+                    onChange={handleChange}
+                    required
+                />            
+            </div>
+            <div className="form_content">
+                <label htmlFor='eventAttendees'>Event Attendees </label>
+                <input
+                    type='number'
+                    id='eventAttendees'
+                    name='eventAttendees'
+                    value={formData.eventParticipants}
                     onChange={handleChange}
                     required
                 />            

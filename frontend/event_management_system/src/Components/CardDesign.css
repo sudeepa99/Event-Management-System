@@ -1,8 +1,8 @@
-.cards{
-    display: flex;
-    flex-direction: row;
-    gap: 25px;
-}.homepage_cards{
+
+.homepage_cards{
+    /* display: flex;
+    flex-direction: row; */
+    flex-wrap: wrap;
     background: none;
     border: none;
     box-shadow: none;
@@ -19,4 +19,7 @@
     padding: 0;
     margin: 0;
 
+}
+.button_section{
+    margin-top: 4em;
 }

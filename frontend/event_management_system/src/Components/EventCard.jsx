@@ -39,9 +39,9 @@ export default function EventCard(props) {
   };
 
   return (
-    <div className='event_cards'>
-      <Card style={{ width: 'auto' }}>
-        <Card.Body>
+    <div >
+      <Card className='event_cards' style={{ width: 'auto' }}>
+        <Card.Body className='card_body'>
           <Card.Title>{props.event_id}</Card.Title>
           <Card.Title>{props.name}</Card.Title>
           <Card.Title>{props.attendees}</Card.Title>

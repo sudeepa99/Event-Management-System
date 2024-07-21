@@ -2,6 +2,7 @@ import React, {useState,useEffect} from 'react'
 import NavigationBar from '../Components/NavigationBar'
 import ImageSlider from '../Components/ImageSlider'
 import CardDesign from '../Components/CardDesign'
+import "./Homepage.css";
 
 
 export default function Homepage() {
@@ -27,12 +28,10 @@ export default function Homepage() {
     <div>
         <NavigationBar/>
         <ImageSlider/>
-        
         <div className="cards">
-        <CardDesign />
         <div className="event_card_list">
         {events.map(event => (
-          <CardDesign key={event.id} name={event.name} />
+          <CardDesign className="card_section" key={event.id} name={event.name} />
         ))}
         </div>
         

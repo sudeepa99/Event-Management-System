@@ -1,7 +1,16 @@
 .event_cards{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
+.card_body{
+    display: flex;
+    flex-direction: column;
+}
+.button_section {
+    display: flex;
+    gap: 10%;
+    margin-top: 10px;
+  }
 .more_details{
     background-color: #FF9F00;
 }
@@ -14,10 +23,7 @@
     background-color: #ff0f0f;
     
 }
-.button_section{
-    /* display: flex;
-    gap: 5%; */
-}
+
 .more_details, .delete, .update {
     color: black;
     border-style: groove;

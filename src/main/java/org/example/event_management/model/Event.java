@@ -1,8 +1,5 @@
 package org.example.event_management.model;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.util.Date;
 @Entity
@@ -12,6 +9,7 @@ public class Event {
     private Long id;
 
     private String name;
+    @Column (length=2000)
     private String description;
     private Date date;
     private Integer attendees;

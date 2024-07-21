@@ -23,10 +23,7 @@
     background-color: #ff0f0f;
     
 }
-.button_section{
-    /* display: flex;
-    gap: 5%; */
-}
+
 .more_details, .delete, .update {
     color: black;
     border-style: groove;

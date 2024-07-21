@@ -51,8 +51,11 @@ export default function Events() {
             key={event.id}
             event_id={event.id}
             name={event.name}
+            date={event.date}
+            location={event.location}
             attendees={event.attendees}
-            onDelete={handleDeleteEvent} // Pass the delete function correctly
+            description={event.description}
+            onDelete={handleDeleteEvent} 
           />
         ))}
       </div>

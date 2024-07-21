@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Modal from 'react-bootstrap/Modal';
 import './EventCard.css';
 import UpdateEventForm from './UpdateEventForm';
 
 export default function EventCard(props) {
   const [isUpdating, setIsUpdating] = useState(false);
+  const [showDetails, setShowDetails] = useState(false);
 
   const handleUpdateClick = () => {
     setIsUpdating(true);
@@ -37,6 +39,13 @@ export default function EventCard(props) {
       }
     }
   };
+  const handleDetailsClick = () => {
+    setShowDetails(true);
+  };
+
+  const handleCloseDetails = () => {
+    setShowDetails(false);
+  };
 
   return (
     <div >
@@ -46,7 +55,7 @@ export default function EventCard(props) {
           <Card.Title>{props.name}</Card.Title>
           <Card.Title>{props.attendees}</Card.Title>
           <div className='button_section'>
-            <Button className='more_details'>More Details</Button>
+            <Button className='more_details' onClick={handleDetailsClick}>More Details</Button>
             <Button className='update' onClick={handleUpdateClick}>Update Event</Button>
             <Button className='delete' onClick={handleDeleteClick}>Delete Event</Button>
             {isUpdating && (
@@ -63,6 +72,25 @@ export default function EventCard(props) {
                 onUpdate={handleUpdate}
               />
             )}
+            <Modal show={showDetails} onHide={handleCloseDetails}>
+            <Modal.Header closeButton>
+          <Modal.Title>Event Details</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p><strong>ID:</strong> {props.event_id}</p>
+          <p><strong>Name:</strong> {props.name}</p>
+          <p><strong>Date:</strong> {props.date}</p>
+          <p><strong>Location:</strong> {props.location}</p>
+          <p><strong>Attendees:</strong> {props.attendees}</p>
+          <p><strong>Description:</strong> {props.description}</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleCloseDetails}>Close</Button>
+        </Modal.Footer>
+
+            </Modal>
+
+            
           </div>
         </Card.Body>
       </Card>

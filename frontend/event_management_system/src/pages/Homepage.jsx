@@ -31,7 +31,7 @@ export default function Homepage() {
         <div className="cards">
         <div className="event_card_list">
         {events.map(event => (
-          <CardDesign className="card_section" key={event.id} name={event.name} />
+          <CardDesign className="card_section" key={event.id} event={event} name={event.name} />
         ))}
         </div>
         

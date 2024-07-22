@@ -1,0 +1,8 @@
+.close_button{
+    background-color: #09B3B0;
+
+}
+
+.close_button:hover{
+    background-color: #ff0000;
+}

@@ -39,7 +39,7 @@ export default function Form() {
             if (response.ok) {
               const data = await response.json();
               console.log('Event added successfully:', data);
-              // Optionally, reset the form after successful submission
+              
               setFormData({
                 eventName: '',
                 eventDate: '',
@@ -99,7 +99,7 @@ export default function Form() {
                     type='number'
                     id='eventAttendees'
                     name='eventAttendees'
-                    value={formData.eventParticipants}
+                    value={formData.eventAttendees}
                     onChange={handleChange}
                     required
                 />            

@@ -18,7 +18,6 @@ export default function EventCard(props) {
   };
 
   const handleUpdate = (updatedEvent) => {
-    // Update the event in the parent component or refresh the list
     console.log('Event updated successfully:', updatedEvent);
   };
 
@@ -30,7 +29,7 @@ export default function EventCard(props) {
         });
         if (response.ok) {
           console.log(`Event with ID ${props.event_id} deleted successfully.`);
-          props.onDelete(props.event_id); // Use the correct prop name
+          props.onDelete(props.event_id); 
         } else {
           console.error('Failed to delete event:', response.statusText);
         }
@@ -87,7 +86,7 @@ export default function EventCard(props) {
             <p><strong>Description:</strong> {props.description}</p>
             </Modal.Body>
             <Modal.Footer>
-            <Button variant="secondary" onClick={handleCloseDetails}>Close</Button>
+            <Button className='close_button' variant="secondary" onClick={handleCloseDetails}>Close</Button>
             </Modal.Footer>
             </Modal>
 

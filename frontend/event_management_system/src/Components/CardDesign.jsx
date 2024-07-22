@@ -16,17 +16,18 @@ export default function CardDesign(props) {
   };
   return (
     <div > 
-        <Button className='homepage_cards' onClick={handleSeeMoreClick}>
-        <Card style={{ width: '18rem' }}>
-        {/* <Card.Img variant="top" src={props.image_name} /> */}
+        
+        <Card className='homepage_cards' style={{ width: '15rem' }}>
         <Card.Body className='card_section'>
         <Card.Title>{props.name}</Card.Title>
         <div className='button_section'>
-        <Button className='see_more' >See More</Button>
         </div>
+        <Button className='see_more'onClick={handleSeeMoreClick}>See More</Button>
         </Card.Body>
+        
         </Card>
-        </Button>
+        
+        
         {showDetails && 
         <DetailedEvent event={props.event} onClose={handleCloseDetails}/>}
     </div>

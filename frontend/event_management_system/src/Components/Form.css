@@ -29,4 +29,10 @@
 .sub_but{
     margin-left: 20%;
     margin-top: 2%;
+    background-color: #09B3B0;
+
+}
+
+.sub_but:hover{
+    background-color: #FF9F00;
 }

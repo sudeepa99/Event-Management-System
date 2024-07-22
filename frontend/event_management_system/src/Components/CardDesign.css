@@ -9,6 +9,7 @@
     outline: none;
     padding: 0;
     margin: 0;
+    background-color: #E6E6DD;
 }
 .homepage_cards:hover,
 .homepage_cards:focus{
@@ -22,4 +23,11 @@
 }
 .button_section{
     margin-top: 4em;
+}
+.see_more{
+    background-color: #09B3B0;
+}
+.see_more:hover{
+    background-color: #FF9F00;
+
 }

@@ -22,7 +22,7 @@ export default function CardDesign(props) {
         <Card.Body className='card_section'>
         <Card.Title>{props.name}</Card.Title>
         <div className='button_section'>
-        <Button className='see more' >See More</Button>
+        <Button className='see_more' >See More</Button>
         </div>
         </Card.Body>
         </Card>

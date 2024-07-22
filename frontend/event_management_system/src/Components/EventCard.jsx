@@ -47,6 +47,8 @@ export default function EventCard(props) {
     setShowDetails(false);
   };
 
+  const formattedDate = new Date(props.date).toLocaleDateString();
+
   return (
     <div >
       <Card className='event_cards' style={{ width: 'auto' }}>
@@ -74,20 +76,19 @@ export default function EventCard(props) {
             )}
             <Modal show={showDetails} onHide={handleCloseDetails}>
             <Modal.Header closeButton>
-          <Modal.Title>Event Details</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <p><strong>ID:</strong> {props.event_id}</p>
-          <p><strong>Name:</strong> {props.name}</p>
-          <p><strong>Date:</strong> {props.date}</p>
-          <p><strong>Location:</strong> {props.location}</p>
-          <p><strong>Attendees:</strong> {props.attendees}</p>
-          <p><strong>Description:</strong> {props.description}</p>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleCloseDetails}>Close</Button>
-        </Modal.Footer>
-
+            <Modal.Title>Event Details</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+            <p><strong>ID:</strong> {props.event_id}</p>
+            <p><strong>Name:</strong> {props.name}</p>
+            <p><strong>Date:</strong> {formattedDate}</p>
+            <p><strong>Location:</strong> {props.location}</p>
+            <p><strong>Attendees:</strong> {props.attendees}</p>
+            <p><strong>Description:</strong> {props.description}</p>
+            </Modal.Body>
+            <Modal.Footer>
+            <Button variant="secondary" onClick={handleCloseDetails}>Close</Button>
+            </Modal.Footer>
             </Modal>
 
             

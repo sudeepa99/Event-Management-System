@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import Events from './pages/Events';
 import AddEvents from './pages/AddEvents';
+import "./App.css"
 function App() {
   return (
     <div className="App">

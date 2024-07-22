@@ -1,4 +1,4 @@
-.logo { /* Adjusted for better visibility */
+.logo {
     width: auto;
     height: auto;
 }
@@ -14,7 +14,8 @@
     top: 0; 
     left: 0; 
     width: 100%;
-    z-index: 1000; 
+    z-index: 1000;
+    background-color: #E6E6DD; 
 }
 
 .d-flex {
@@ -25,8 +26,20 @@
     display: flex;
     align-items: center;
     margin-left: 30%;
+
+}
+
+.me-2{
+    border-color: #09B3B0;
 }
 
 .me-auto .nav-link {
     color: #09B3B0 ; 
+}
+.search_section{
+    background-color: #09B3B0;
+    color:black;
+}
+.search_section:hover{
+    background-color: #FF9F00;
 }

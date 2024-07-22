@@ -5,7 +5,6 @@ import EventCard from '../Components/EventCard';
 
 export default function Events() {
   const [events, setEvents] = useState([]);
-
   useEffect(() => {
     const fetchEvents = async () => {
       try {
@@ -29,7 +28,6 @@ export default function Events() {
         method: 'DELETE',
       });
       if (response.ok) {
-        // Remove the deleted event from the state
         setEvents(events.filter(event => event.id !== id));
         console.log('Event deleted successfully');
       } else {

@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image';
-import logo from '../Assets/Logo/Event Ease.png';
+import logo2 from '../Assets/Logo/event ease logo.png';
 import './NavigationBar.css';
 import EventSearchResult from './EventSearchResult';
 
@@ -35,7 +35,7 @@ export default function NavigationBar() {
     <div >
         <Navbar className='navbar'  data-bs-theme="light">
         <Container className='nav-container'>
-        <Image className='logo' src={logo} />
+        <Image className='logo' src={logo2} />
         <Form className="d-flex">
             <Form.Control
               type="search"

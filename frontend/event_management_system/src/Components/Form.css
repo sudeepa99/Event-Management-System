@@ -4,8 +4,7 @@
     flex-direction: column;
     gap: 8rem;
     margin-left: 30%;
-    /* align-content: center;
-    align-items: center; */
+    
 }
 .form_content{
     display: flex;

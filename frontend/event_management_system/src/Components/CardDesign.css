@@ -1,33 +1,15 @@
 
-.homepage_cards{
-    /* display: flex;
-    flex-direction: row; */
-    flex-wrap: wrap;
-    background: none;
-    border: none;
-    box-shadow: none;
-    outline: none;
-    padding: 0;
-    margin: 0;
-    background-color: #E6E6DD;
-}
-.homepage_cards:hover,
-.homepage_cards:focus{
-    background: none;
-    border: none;
-    box-shadow: none;
-    outline: none;
-    padding: 0;
-    margin: 0;
-
-}
-.button_section{
-    margin-top: 4em;
-}
 .see_more{
     background-color: #09B3B0;
+    color: black;
 }
 .see_more:hover{
     background-color: #FF9F00;
 
+}
+.card_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

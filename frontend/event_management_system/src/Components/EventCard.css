@@ -10,17 +10,21 @@
     display: flex;
     gap: 10%;
     margin-top: 10px;
+    height: 5%;
   }
 .more_details{
     background-color: #FF9F00;
+    height: 5%;
 }
 .update{
     background-color: #09B3B0;
+    height: 5%;
     
 
 }
 .delete{
     background-color: #ff0f0f;
+    height: 5%;
     
 }
 

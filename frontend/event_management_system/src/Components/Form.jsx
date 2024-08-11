@@ -57,7 +57,7 @@ export default function Form() {
       
   return (
     <div >
-        <form className='h-screen bg-gradient-to-bl from-green-700 to-yellow-600 mx-96 my-28  mt-28 flex flex-col gap-4 text-center justify-center items-center  rounded-lg '  onSubmit={handleSubmit}>
+        <form className='h-screen bg-gradient-to-bl from-green-700 to-yellow-600 mx-auto mt-28 flex flex-col gap-4 text-center justify-center items-center rounded-lg p-4 sm:p-6 md:p-8 lg:p-10 w-full max-w-md md:max-w-lg lg:max-w-xl'  onSubmit={handleSubmit}>
             <div className="flex flex-col gap-2">
                 <label htmlFor='eventName' className='text-lg text-yellow-100'>Event Name</label>
                 <input
@@ -67,7 +67,7 @@ export default function Form() {
                     value={formData.eventName}
                     onChange={handleChange}
                     required   
-                    className='w-[400px] rounded-lg bg-gray-400 px-2'        
+                    className='w-[200px] md:w-10/12 lg:w-9/12 xl:w-[400px] rounded-lg bg-gray-400 px-2 py-1 sm:py-2'        
                 />
             </div>
 
@@ -80,7 +80,7 @@ export default function Form() {
                     value={formData.eventDate}
                     onChange={handleChange}
                     required
-                    className='w-[400px] rounded-md bg-gray-400 px-2' 
+                    className='w-[200px] md:w-10/12 lg:w-9/12 xl:w-[400px] rounded-lg bg-gray-400 px-2 py-1 sm:py-2'
                 />
             </div>
 
@@ -93,7 +93,7 @@ export default function Form() {
                     value={formData.eventLocation}
                     onChange={handleChange}
                     required
-                    className='w-[400px] rounded-md bg-gray-400 px-2' 
+                    className='w-[200px] md:w-10/12 lg:w-9/12 xl:w-[400px] rounded-lg bg-gray-400 px-2 py-1 sm:py-2'
                 />            
             </div>
             <div  className="flex flex-col gap-2">
@@ -105,7 +105,7 @@ export default function Form() {
                     value={formData.eventAttendees}
                     onChange={handleChange}
                     required
-                    className='w-[400px] rounded-md bg-gray-400 px-2' 
+                    className='w-[200px] md:w-10/12 lg:w-9/12 xl:w-[400px] rounded-lg bg-gray-400 px-2 py-1 sm:py-2' 
                 />            
             </div>
             <div className="flex flex-col gap-2">
@@ -118,11 +118,11 @@ export default function Form() {
                     value={formData.eventDescription}
                     onChange={handleChange}
                     required
-                    className='w-[400px] rounded-md bg-gray-400 px-2 py-2'                />
+                    className='w-[200px] md:w-10/12 lg:w-9/12 xl:w-[400px] rounded-lg bg-gray-400 px-2 py-2 sm:py-4'           />
 
             </div>
 
-            <Button className='bg-[#09B3B0] hover:bg-[#FF9F00] border-none' type='submit'>Add Event</Button>
+            <Button className='bg-[#09B3B0] hover:bg-[#FF9F00] border-none mt-4 px-4 py-2 sm:px-6 sm:py-3 text-white rounded-lg' type='submit'>Add Event</Button>
         </form>
       
     </div>

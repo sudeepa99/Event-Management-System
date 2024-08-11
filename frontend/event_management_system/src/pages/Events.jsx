@@ -42,7 +42,7 @@ export default function Events() {
   return (
     <div>
       <NavigationBar />
-      <h1 className='mt-28 mb-6 text-2xl text-[#09B3B0]'>Event List</h1>
+      <h1 className='mt-20 mb-6 text-2xl text-[#09B3B0]'>Event List</h1>
       <div className='flex flex-col gap-10'>
         {events.map(event => (
           <EventCard

@@ -1,3 +1,24 @@
-.search-result-card{
-    margin: 10%;
+.search-result-card {
+    margin: 10%; /* Initial margin for larger screens */
+    padding: 20px; /* Optional: Add padding for content inside the card */
+    background-color: #f5f5f5; /* Optional: Light background for better contrast */
+    border-radius: 8px; /* Optional: Rounded corners for a modern look */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow for depth */
+}
+
+/* Media Query for tablets and smaller devices */
+@media (max-width: 768px) {
+    .search-result-card {
+        margin: 5%; /* Reduce margin for smaller screens */
+        padding: 15px; /* Adjust padding for better fit */
+    }
+}
+
+/* Media Query for very small devices (e.g., mobile phones) */
+@media (max-width: 480px) {
+    .search-result-card {
+        margin: 3%; /* Further reduce margin for very small screens */
+        padding: 10px; /* Further adjust padding */
+        font-size: 0.9rem; /* Adjust font size for better readability */
+    }
 }

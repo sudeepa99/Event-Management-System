@@ -56,22 +56,23 @@ export default function Form() {
       };
       
   return (
-    <div className='form'>
-        <form onSubmit={handleSubmit}>
-            <div className="form_content">
-                <label htmlFor='eventName'>Event Name</label>
+    <div >
+        <form className='h-screen bg-gradient-to-bl from-green-700 to-yellow-600 mx-96 my-28  mt-28 flex flex-col gap-4 text-center justify-center items-center  rounded-lg '  onSubmit={handleSubmit}>
+            <div className="flex flex-col gap-2">
+                <label htmlFor='eventName' className='text-lg text-yellow-100'>Event Name</label>
                 <input
                     type='text'
                     id='eventName'
                     name='eventName'
                     value={formData.eventName}
                     onChange={handleChange}
-                    required            
+                    required   
+                    className='w-[400px] rounded-lg bg-gray-400 px-2'        
                 />
             </div>
 
-            <div className="form_content">
-                <label htmlFor='eventDate'>Event Date</label>
+            <div className="flex flex-col gap-2">
+                <label htmlFor='eventDate' className='text-lg text-yellow-100'>Event Date</label>
                 <input
                     type='date'
                     id='eventDate'
@@ -79,11 +80,12 @@ export default function Form() {
                     value={formData.eventDate}
                     onChange={handleChange}
                     required
+                    className='w-[400px] rounded-md bg-gray-400 px-2' 
                 />
             </div>
 
-            <div className="form_content">
-                <label htmlFor='eventLocation'>Event Location </label>
+            <div className="flex flex-col gap-2" >
+                <label htmlFor='eventLocation' className='text-lg text-yellow-100'>Event Location </label>
                 <input
                     type='text'
                     id='eventLocation'
@@ -91,10 +93,11 @@ export default function Form() {
                     value={formData.eventLocation}
                     onChange={handleChange}
                     required
+                    className='w-[400px] rounded-md bg-gray-400 px-2' 
                 />            
             </div>
-            <div className="form_content">
-                <label htmlFor='eventAttendees'>Event Attendees </label>
+            <div  className="flex flex-col gap-2">
+                <label htmlFor='eventAttendees'className='text-lg text-yellow-100'>Event Attendees </label>
                 <input
                     type='number'
                     id='eventAttendees'
@@ -102,10 +105,11 @@ export default function Form() {
                     value={formData.eventAttendees}
                     onChange={handleChange}
                     required
+                    className='w-[400px] rounded-md bg-gray-400 px-2' 
                 />            
             </div>
-            <div className="form_content">
-                <label htmlFor='eventDescription'>Event Description</label>
+            <div className="flex flex-col gap-2">
+                <label htmlFor='eventDescription' className='text-lg text-yellow-100'>Event Description</label>
                 <textarea
                     type='text'
                     id='eventDescription'
@@ -114,11 +118,11 @@ export default function Form() {
                     value={formData.eventDescription}
                     onChange={handleChange}
                     required
-                />
+                    className='w-[400px] rounded-md bg-gray-400 px-2 py-2'                />
 
             </div>
 
-            <Button className='sub_but' type='submit'>Add Event</Button>
+            <Button className='bg-[#09B3B0] hover:bg-[#FF9F00] border-none' type='submit'>Add Event</Button>
         </form>
       
     </div>

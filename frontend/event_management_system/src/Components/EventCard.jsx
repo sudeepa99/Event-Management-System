@@ -50,7 +50,7 @@ export default function EventCard(props) {
 
   return (
     <div >
-      <Card className='event_cards' style={{ width: 'auto' }}>
+      <Card className='bg-gradient-to-bl from-green-700 to-yellow-600 ' style={{ width: 'auto' }}>
         <Card.Body className='card_body'>
           <Card.Title>{props.event_id}</Card.Title>
           <Card.Title>{props.name}</Card.Title>

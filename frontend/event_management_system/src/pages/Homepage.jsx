@@ -5,6 +5,7 @@ import CardDesign from '../Components/CardDesign'
 import "./Homepage.css";
 
 
+
 export default function Homepage() {
   const [events, setEvents] = useState([]);
 
@@ -27,7 +28,10 @@ export default function Homepage() {
   return (
     <div>
         <NavigationBar/>
-        <ImageSlider/>
+        
+          <ImageSlider/>
+        
+        
         <div className="cards">
         <div className="event_card_list">
         {events.map(event => (

@@ -1,37 +1,81 @@
-.event_cards{
+.event_cards {
     display: flex;
     flex-direction: column;
+    gap: 15px; /* Add space between cards */
+    padding: 20px; /* Add padding to the container */
 }
-.card_body{
+
+.card_body {
     display: flex;
     flex-direction: column;
+    padding: 15px; /* Add padding inside each card *//* Light background color for card body */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
+
 .button_section {
     display: flex;
-    gap: 10%;
+    gap: 10px; /* Adjust the gap for better spacing */
     margin-top: 10px;
-    height: 5%;
-  }
-.more_details{
-    background-color: #FF9F00;
-    height: 5%;
-}
-.update{
-    background-color: #09B3B0;
-    height: 5%;
-    
-
-}
-.delete{
-    background-color: #ff0f0f;
-    height: 5%;
-    
+    height: auto; /* Use auto height for better flexibility */
+    justify-content: space-around; /* Space buttons evenly */
 }
 
-.more_details, .delete, .update {
+.more_details, .update, .delete {
     color: black;
     border-style: groove;
-    border-width: 2%;
+    border-width: 2px; /* Use fixed pixel value for consistent appearance */
     border-color: wheat;
+    padding: 10px 20px; /* Add padding for touch-friendly buttons */
+    border-radius: 5px; /* Rounded corners for buttons */
+    flex: 1; /* Allow buttons to stretch and fill available space */
+    text-align: center; /* Center text within buttons */
+    font-size: 1rem; /* Base font size */
+}
 
+.more_details {
+    background-color: #FF9F00;
+}
+
+.update {
+    background-color: #09B3B0;
+}
+
+.delete {
+    background-color: #ff0f0f;
+}
+
+/* Media Query for tablets and smaller devices */
+@media (max-width: 768px) {
+    .button_section {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 5px; /* Reduce gap for vertical stacking */
+    }
+
+    .more_details, .update, .delete {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+        padding: 8px 15px; /* Adjust padding for smaller screens */
+        margin-bottom: 5px; /* Add margin to separate stacked buttons */
+    }
+}
+
+/* Media Query for very small devices (e.g., mobile phones) */
+@media (max-width: 480px) {
+    .event_cards {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .card_body {
+        padding: 10px; /* Reduce padding inside each card */
+    }
+
+    .button_section {
+        flex-direction: column; /* Keep buttons stacked vertically */
+        gap: 3px; /* Further reduce gap for very small screens */
+    }
+
+    .more_details, .update, .delete {
+        font-size: 0.8rem; /* Further adjust font size */
+        padding: 6px 10px; /* Further adjust padding */
+    }
 }

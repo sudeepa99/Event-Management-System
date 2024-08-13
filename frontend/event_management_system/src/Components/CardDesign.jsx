@@ -17,7 +17,7 @@ export default function CardDesign(props) {
   return (
     <div > 
         
-        <Card className='homepage_cards' style={{ width: '15rem' }}>
+        <Card className='bg-gradient-to-bl from-green-700 to-yellow-600 ' style={{ width: '15rem' }}>
         <Card.Body className='card_section'>
         <Card.Title>{props.name}</Card.Title>
         <div className='button_section'>

@@ -1,8 +1,30 @@
-.close_button{
+.close_button {
     background-color: #09B3B0;
-
+    color: white; /* Ensure text is visible on the button */
+    padding: 10px 15px; /* Add padding to make it touch-friendly */
+    border: none; /* Remove any default borders */
+    border-radius: 5px; /* Optional: Add some rounding to the corners */
+    font-size: 1rem; /* Set a base font size */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
-.close_button:hover{
+.close_button:hover {
     background-color: #ff0000;
+}
+
+/* Media Query for smaller devices */
+@media (max-width: 768px) {
+    .close_button {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+        padding: 8px 12px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* Media Query for very small devices (e.g., mobile phones) */
+@media (max-width: 480px) {
+    .close_button {
+        font-size: 0.8rem; /* Further adjust font size for very small screens */
+        padding: 6px 10px; /* Further adjust padding for very small screens */
+    }
 }

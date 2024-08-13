@@ -7,7 +7,7 @@ export default function DetailedEvent({event, onClose}) {
     const formattedDate = new Date(event.date).toLocaleDateString();
   return (
     <div >
-        <Card style={{ width: 'auto', borderColor: '##09B3B0', borderStyle: 'solid' }}>
+        <Card className='bg-gradient-to-bl from-yellow-600 to-green-700 mt-2' style={{ width: 'auto', borderColor: '##09B3B0', borderStyle: 'solid' }}>
         <Card.Body>
           <Card.Title>{event.name}</Card.Title>
           <Card.Text>ID: {event.id}</Card.Text>
